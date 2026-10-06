@@ -14,11 +14,11 @@ spec:
       volumeMounts:
         - mountPath: /usr/share/nginx/html
           name: sharedstorage
-      initContainers:
-        - name: redhat
-          image: rkalluru/learnk8s:init-container-html-generator
-          volumeMounts:
-            - mountPath: /opt
-              name: sharedstorage
+  initContainers:
+    - name: redhat
+      image: rkalluru/learnk8s:init-container-html-generator
+      volumeMounts:
+        - mountPath: /opt
+          name: sharedstorage
 
   
