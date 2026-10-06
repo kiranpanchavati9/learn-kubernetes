@@ -17,6 +17,7 @@ spec:
 
     - name: busybox-container-1
       image: busybox:latest
+      command: ["sleep", "infinity"]
       volumeMounts:
         - mountPath: /opt
           name: sharedstorage
