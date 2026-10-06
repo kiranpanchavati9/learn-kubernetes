@@ -12,7 +12,7 @@ spec:
     - name: nginx-container-1
       image: nginx:latest
       volumeMounts:
-        - mountPath: /opt
+        - mountPath: /usr/share/nginx/html
           name: sharedstorage
 
     - name: busybox-container-1
