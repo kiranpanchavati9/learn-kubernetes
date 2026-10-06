@@ -5,7 +5,7 @@ metadata:
 
 spec:
   volumes:
-  - name: shared_storage
+  - name: sharedstorage
     emptyDir: {}
 
   containers:
@@ -13,12 +13,12 @@ spec:
       image: nginx:latest
       volumeMounts:
         - mountPath: /opt
-          name: shared_storage
+          name: sharedstorage
 
     - name: busybox-container-1
       image: busybox:latest
       volumeMounts:
         - mountPath: /opt
-          name: shared_storage
+          name: sharedstorage
 
   
