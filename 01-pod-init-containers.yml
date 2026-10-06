@@ -19,6 +19,6 @@ spec:
           image: rkalluru/learnk8s:init-container-html-generator
           volumeMounts:
             - mountPath: /opt
-              name: sharedstorages
+              name: sharedstorage
 
   
