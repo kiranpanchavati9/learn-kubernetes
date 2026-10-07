@@ -21,3 +21,7 @@ spec:
     - name: netshoot
       image: nicolaka/netshoot:latest
       command: ["sleep", "3600"]
+
+# At cases where we need to be in container to troubleshoot.
+# kubectl debug -it ephmeral-container -c debugger --image=nicolaka/netshoot:latest --target=sample --profile=general
+
