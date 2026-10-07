@@ -6,3 +6,14 @@ spec:
   containers:
     - name: sample
       image: busybox:latest
+
+# Debug from the another pod
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug
+spec:
+  containers:
+    - name: redis
+      image: redis:latest
