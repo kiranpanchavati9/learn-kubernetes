@@ -51,3 +51,27 @@ spec:
     - configMapRef:
         name: game-demo
 
+--- 
+
+
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: configmap-demo-pod-3
+spec:
+  containers:
+  - name: demo 
+    image: nginx:latest
+      volumeMounts:
+      - name: config
+        mountPath: "/config"
+        readOnly: true
+  volumes:
+  # You set volumes at the Pod level, then mount them into containers inside that Pod
+  - name: config
+    configMap:
+      # Provide the name of the ConfigMap you want to mount.
+      name: game-demo
+      # An array of keys from the ConfigMap to create as files
